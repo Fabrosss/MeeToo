@@ -1,0 +1,23 @@
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="card" style="width: 30rem; padding: 2rem;">
+        <div class="card-body">
+            <h2 class="card-title text-center label-text">Login</h2>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <label class="label-text" for="username">Username</label>
+                    <input class="form-control w-100" type="text" id="username" formControlName="username">
+                    <div class="alert alert-danger" role="alert" *ngIf="loginForm.get('username')?.hasError('required') && loginForm.get('username')?.touched">
+                        Enter username!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="label-text" for="password">Password</label>
+                    <input class="form-control w-100" type="text" id="password" formControlName="password">
+                    <div class="alert alert-danger h-80" role="alert" *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">
+                        Enter password!</div>
+                </div>
+                <button  class="btn btn-success" type="submit" [disabled]="loginForm.invalid">Login</button>
+            </form>
+        </div>
+    </div>
+</div>

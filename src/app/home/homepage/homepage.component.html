@@ -1,0 +1,16 @@
+<div class="calendar">
+    <div class="header">
+      <span class="arrow prev" (click)="prevMonth()" title="Poprzedni miesiąc">‹</span>
+      {{ currentMonth | date: 'MMMM yyyy' }}
+      <span class="arrow next" (click)="nextMonth()" title="Następny miesiąc">›</span>
+    </div>
+    <div class="weekdays">
+      <div *ngFor="let day of weekdays" class="weekday">{{ day }}</div>
+    </div>
+    <div class="days">
+        <ng-container *ngFor="let day of calendarDays">
+            <div *ngIf="day === 0" class="previous-month"></div>
+            <app-calendar-card *ngIf="day !== 0" [calendarCardDay]="day"></app-calendar-card>
+        </ng-container>
+    </div>
+  </div>
