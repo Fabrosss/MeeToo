@@ -1,0 +1,61 @@
+<ng-container *ngIf="!detailMeeting">
+  <h2>Nie ma takiego spotkania</h2>
+</ng-container>
+<ng-container *ngIf="detailMeeting">
+  <div class="card-body m-1">
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label class="label-text">Nazwa spotkania</label>
+        <input type="text" required minlength="4" name="userUsername" #userUsername='ngModel' [(ngModel)]="name" class="w-100 form-control">
+<!--        <ng-container *ngIf="!userUsername.valid && (userUsername.touched || userUsername.dirty)">-->
+<!--          <div *ngIf="userUsername.control.errors?.['required']" class="alert alert-danger" role="alert" >-->
+<!--            Ta kontrolka nie może być pusta.-->
+<!--          </div>-->
+<!--          <div *ngIf="userUsername.control.errors?.['minlength']" class="alert alert-danger" role="alert">-->
+<!--            Ta kontrolka musi mieć 4 znaki.-->
+<!--          </div>-->
+<!--          <div *ngIf="userUsername.control.errors?.['maxlength']" class="alert alert-danger" role="alert">-->
+<!--            Ta kontrolka musi mieć mniej niż 15 znaków.-->
+<!--          </div>-->
+<!--          <div *ngIf="userUsername.control.errors?.['firstLetter']" class="alert alert-danger" role="alert">-->
+<!--            Pierwsza literka powinna być literą!-->
+<!--          </div>-->
+<!--        </ng-container>-->
+      </div>
+      <div class="mb-3 row">
+        <div class="col">
+          <label class="label-text">Data rozpoczęcia</label>
+          <input type="datetime-local" #startDate='ngModel' name="startDate" [(ngModel)]="startDateTimeLocalValue" class="form-control w-100">
+          <!--        <ng-container *ngIf="!userPassword.valid && (userPassword.touched || userPassword.dirty)">-->
+          <!--          <div *ngIf="userPassword.control.errors?.['required']" class="alert alert-danger" role="alert" >-->
+          <!--            Ta kontrolka nie może być pusta.-->
+          <!--          </div>-->
+          <!--          <div *ngIf="userPassword.control.errors?.['minlength']" class="alert alert-danger" role="alert">-->
+          <!--            Ta kontrolka musi mieć 4 znaki.-->
+          <!--          </div>-->
+          <!--          <div *ngIf="userPassword.control.errors?.['maxlength']" class="alert alert-danger" role="alert">-->
+          <!--            Ta kontrolka musi mieć mniej niż 15 znaków.-->
+          <!--          </div>-->
+          <!--        </ng-container>-->
+        </div>
+        <div class="col">
+          <label class="label-text">Data zakończenia</label>
+          <input type="datetime-local" #endDate='ngModel' name="endDate" [(ngModel)]="endDateTimeLocalValue" class="form-control w-100">
+          <!--        <ng-container *ngIf="!userPassword.valid && (userPassword.touched || userPassword.dirty)">-->
+          <!--          <div *ngIf="userPassword.control.errors?.['required']" class="alert alert-danger" role="alert" >-->
+          <!--            Ta kontrolka nie może być pusta.-->
+          <!--          </div>-->
+          <!--          <div *ngIf="userPassword.control.errors?.['minlength']" class="alert alert-danger" role="alert">-->
+          <!--            Ta kontrolka musi mieć 4 znaki.-->
+          <!--          </div>-->
+          <!--          <div *ngIf="userPassword.control.errors?.['maxlength']" class="alert alert-danger" role="alert">-->
+          <!--            Ta kontrolka musi mieć mniej niż 15 znaków.-->
+          <!--          </div>-->
+          <!--        </ng-container>-->
+        </div>
+      </div>
+      <button  class="btn btn-success" type="submit" [disabled]="form.invalid">Login</button>
+    </form>
+  </div>
+
+</ng-container>

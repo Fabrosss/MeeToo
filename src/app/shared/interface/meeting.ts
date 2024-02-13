@@ -5,5 +5,5 @@ export interface Meeting {
   name: string;
   date: Date;
   startTime: Time;
-  endtime: Time;
+  endTime: Time;
 }

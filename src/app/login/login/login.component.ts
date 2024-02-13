@@ -1,12 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
 import { Router } from '@angular/router';
-import { FirstLetterDirective } from '../../shared/directives/first-letter.directive';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +10,7 @@ export class LoginComponent implements OnInit {
   username = '';
   errorMessage = '';
   password = '';
-  constructor(private router: Router, private fb: FormBuilder) {}
+  constructor(private router: Router) {}
   ngOnInit(): void {}
 
   onSubmit() {

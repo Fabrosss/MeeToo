@@ -1,18 +1,28 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { Meeting } from '../../shared/interface/meeting';
+import { MeetingService } from "../../shared/services/meeting.service";
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
-  styleUrl: './homepage.component.css',
+  styleUrls: ['./homepage.component.css'],
 })
-export class HomepageComponent {
+export class HomepageComponent implements OnInit {
+  meetings: Meeting[] = [];
   currentMonth: Date = new Date();
   weekdays: string[] = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   calendarDays: number[] = [];
 
-  constructor() {
+  constructor(private meetingService: MeetingService) {
     this.generateCalendarDays();
+  }
+
+  ngOnInit(): void {
+    this.meetingService.getMeetings().subscribe({
+      next: allMeetings => {
+        this.meetings = allMeetings;
+      }
+    });
   }
 
   generateCalendarDays(): void {
@@ -48,7 +58,14 @@ export class HomepageComponent {
       this.currentMonth.getFullYear(),
       this.currentMonth.getMonth() + 1
     );
-
     this.generateCalendarDays();
+  }
+
+  getDayMeetings(day: number): Meeting[] {
+    return this.meetings.filter(meeting => this.isSameDay(new Date(meeting.date), day));
+  }
+
+  private isSameDay(day1: Date, day2: number): boolean {
+    return day1.getDate() === day2 && day1.getMonth() === this.currentMonth.getMonth();
   }
 }

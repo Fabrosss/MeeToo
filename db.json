@@ -1,0 +1,25 @@
+{
+  "meetings": [
+    {
+      "id": 1,
+      "name": "Sprint Planning",
+      "date": "2024-02-10",
+      "startTime": {"hours": 10, "minutes": 0},
+      "endTime": {"hours": 12, "minutes": 0}
+    },
+    {
+      "id": 2,
+      "name": "Design Review",
+      "date": "2024-02-15",
+      "startTime": {"hours": 14, "minutes": 30},
+      "endTime": {"hours": 16, "minutes": 0}
+    },
+    {
+      "id": 3,
+      "name": "Monthly Team Meeting",
+      "date": "2024-02-28",
+      "startTime": {"hours": 9, "minutes": 0},
+      "endTime": {"hours": 11, "minutes": 0}
+    }
+  ]
+}

@@ -10,7 +10,7 @@
     <div class="days">
         <ng-container *ngFor="let day of calendarDays">
             <div *ngIf="day === 0" class="previous-month"></div>
-            <app-calendar-card *ngIf="day !== 0" [calendarCardDay]="day" [calendarCardMonth] ="currentMonth"></app-calendar-card>
+            <app-calendar-card *ngIf="day !== 0" [calendarCardDay]="day" [calendarCardMonth] ="currentMonth" [dayMeetings]="getDayMeetings(day)"></app-calendar-card>
         </ng-container>
     </div>
   </div>

@@ -13,7 +13,14 @@ import { HomepageComponent } from './home/homepage/homepage.component';
 import { CalendarCardComponent } from './home/calendar-card/calendar-card.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { FormsModule } from '@angular/forms';
-import { FirstLetterDirective } from './shared/directives/first-letter.directive';
+import { AddNewMeetingComponent } from './home/add-new-meeting/add-new-meeting.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DetailMeetingComponent } from './home/detail-meeting/detail-meeting.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -23,10 +30,21 @@ import { FirstLetterDirective } from './shared/directives/first-letter.directive
     HomepageComponent,
     CalendarCardComponent,
     PagenotfoundComponent,
-    FirstLetterDirective,
+    AddNewMeetingComponent,
+    DetailMeetingComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, LoginModule, FormsModule],
-  exports: [FirstLetterDirective],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    LoginModule,
+    FormsModule,
+    HttpClientModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatButtonModule,
+  ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })

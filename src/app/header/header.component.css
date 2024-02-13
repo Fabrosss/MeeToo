@@ -1,0 +1,14 @@
+/* Styl dla lekkiego szarego koloru dla nav-item */
+.navbar-nav .nav-item a {
+    color: #aaa; /* Lekki szary kolor */
+}
+
+/* Styl dla białego koloru dla aktywnego nav-link */
+.navbar-nav .nav-item a.active {
+    color: #fff !important; /* Biały kolor z użyciem !important, aby nadpisać inne style */
+}
+
+/* Styl dla białego koloru dla hover nad nav-link */
+.navbar-nav .nav-item a:hover {
+    color: #fff !important; /* Biały kolor z użyciem !important, aby nadpisać inne style */
+}
