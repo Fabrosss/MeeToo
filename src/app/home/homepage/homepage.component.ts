@@ -40,7 +40,7 @@ export class HomepageComponent implements OnInit {
     const firstDayOfWeek = (firstDayOfMonth.getDay() + 6) % 7;
     const lastDayOfMonthDate = lastDayOfMonth.getDate();
 
-    this.calendarDays = Array.from({ length: firstDayOfWeek }, (_) => 0).concat(
+    this.calendarDays = Array.from({ length: firstDayOfWeek }, () => 0).concat(
       Array.from({ length: lastDayOfMonthDate }, (_, index) => index + 1)
     );
   }

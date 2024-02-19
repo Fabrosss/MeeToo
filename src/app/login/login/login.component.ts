@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,18 +6,12 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   username = '';
-  errorMessage = '';
   password = '';
   constructor(private router: Router) {}
-  ngOnInit(): void {}
 
   onSubmit() {
-    if (0 === 0) { //uwierzytelnianie użytkownika
-      this.router.navigate(['home']);
-    } else {
-      this.errorMessage = 'Podaj poprawne dane';
-    }
+    this.router.navigate(['home']);
   }
 }

@@ -1,11 +1,18 @@
 <div class="card">
    <div class="ms-1">{{calendarCardDay}}</div>
     <div *ngIf="dayMeetings">
-      <div *ngFor="let todayMeeting of dayMeetings" class="takenDate" style="background-color: {{todayMeeting.color}}" (click)="meetingDetail(todayMeeting)">
+      <div (click)="meetingDetail(todayMeeting)"
+           *ngFor="let todayMeeting of dayMeetings"
+           class="takenDate"
+           style="background-color: {{todayMeeting.color}}"
+           (keydown.enter)="meetingDetail(todayMeeting)"
+           (keydown.space)="meetingDetail(todayMeeting)"
+           tabindex="0">
         <div class="ms-2">
           <div>{{todayMeeting.name}}</div>
           <div>
-            {{ todayMeeting.startTime.hours }}:{{ todayMeeting.startTime.minutes | number: '2.0' }}-{{ todayMeeting.endTime.hours }}:{{ todayMeeting.endTime.minutes | number: '2.0' }}
+            {{ todayMeeting.startTime.hours }}:{{ todayMeeting.startTime.minutes | number: '2.0' }}
+            -{{ todayMeeting.endTime.hours }}:{{ todayMeeting.endTime.minutes | number: '2.0' }}
           </div>
         </div>
       </div>

@@ -1,8 +1,8 @@
 <div class="calendar">
     <div class="header">
-      <span class="arrow prev" (click)="prevMonth()" title="Poprzedni miesiąc">‹</span>
+      <span class="arrow prev" (click)="prevMonth()" (keydown.enter)="prevMonth()" (keydown.space)="prevMonth()" title="Poprzedni miesiąc" tabindex="0">‹</span>
       {{ currentMonth | date: 'MMMM yyyy' }}
-      <span class="arrow next" (click)="nextMonth()" title="Następny miesiąc">›</span>
+      <span class="arrow next" (click)="nextMonth()" (keydown.enter)="nextMonth()" (keydown.space)="nextMonth()" title="Następny miesiąc" tabindex="0">›</span>
     </div>
     <div class="weekdays">
       <div *ngFor="let day of weekdays" class="weekday">{{ day }}</div>

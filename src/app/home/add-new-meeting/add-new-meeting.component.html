@@ -1,8 +1,8 @@
 <div class="card-body m-1">
     <form #form="ngForm" (ngSubmit)="onSubmit()">
       <div class="mb-3">
-        <label class="label-text">Nazwa spotkania</label>
-        <input type="text" required  name="meetingname" #meetingName='ngModel' [(ngModel)]="name" class="w-100 form-control">
+        <label for="meetingName" class="label-text">Nazwa spotkania</label>
+        <input type="text" required id="meetingName" name="meetingName" #meetingName='ngModel' [(ngModel)]="name" class="w-100 form-control">
         <ng-container *ngIf="!meetingName.valid && (meetingName.touched || meetingName.dirty)">
           <div *ngIf="meetingName.control.errors?.['required']" class="alert alert-danger" role="alert" >
             Nazwa wydarzenia nie może być pusta.
@@ -11,8 +11,8 @@
       </div>
       <div class="mb-3 row">
         <div class="col">
-          <label class="label-text">Data rozpoczęcia</label>
-          <input type="datetime-local" required #startDate='ngModel' name="startDate" [(ngModel)]="startDateTimeLocalValue" class="form-control w-100">
+          <label for="startDate" class="label-text">Data rozpoczęcia</label>
+          <input type="datetime-local" required #startDate='ngModel' id="startDate" name="startDate" [(ngModel)]="startDateTimeLocalValue" class="form-control w-100">
           <ng-container *ngIf="!startDate.valid && (startDate.touched || startDate.dirty)">
             <div *ngIf="startDate.control.errors?.['required']" class="alert alert-danger" role="alert" >
               Data i godzina startu nie może być pusta.
@@ -20,8 +20,8 @@
           </ng-container>
         </div>
         <div class="col">
-          <label class="label-text">Data zakończenia</label>
-          <input type="datetime-local" required #endDate='ngModel' name="endDate" [(ngModel)]="endDateTimeLocalValue" class="form-control w-100">
+          <label for="endDate" class="label-text">Data zakończenia</label>
+          <input type="datetime-local" required id="endDate" #endDate='ngModel' name="endDate" [(ngModel)]="endDateTimeLocalValue" class="form-control w-100">
           <ng-container *ngIf="!endDate.valid && (endDate.touched || endDate.dirty)">
             <div *ngIf="endDate.control.errors?.['required']" class="alert alert-danger" role="alert" >
               Data i godzina zakończenia nie może być pusta.

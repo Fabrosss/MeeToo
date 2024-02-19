@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Meeting } from '../../shared/interface/meeting';
 import {Router} from "@angular/router";
 
@@ -7,13 +7,11 @@ import {Router} from "@angular/router";
   templateUrl: './calendar-card.component.html',
   styleUrl: './calendar-card.component.css',
 })
-export class CalendarCardComponent implements OnInit {
+export class CalendarCardComponent{
   @Input() calendarCardDay!: number;
   @Input() calendarCardMonth!: Date;
   @Input() dayMeetings!: Meeting[];
   constructor(private router: Router) {}
-  ngOnInit(): void {
-  }
 
   meetingDetail(todayMeeting: Meeting) {
     this.router.navigate(['/meeting', todayMeeting.id]);
