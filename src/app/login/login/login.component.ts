@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    if (0 === 0) {
+    if (0 === 0) { //uwierzytelnianie użytkownika
       this.router.navigate(['home']);
     } else {
       this.errorMessage = 'Podaj poprawne dane';

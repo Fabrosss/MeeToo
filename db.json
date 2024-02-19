@@ -3,23 +3,100 @@
     {
       "id": 1,
       "name": "Sprint Planning",
-      "date": "2024-02-10",
-      "startTime": {"hours": 10, "minutes": 0},
-      "endTime": {"hours": 12, "minutes": 0}
+      "date": "2024-03-09T00:00:00.000Z",
+      "color": "#E4959E",
+      "startTime": {
+        "hours": 10,
+        "minutes": 0
+      },
+      "endTime": {
+        "hours": 12,
+        "minutes": 0
+      }
     },
     {
       "id": 2,
       "name": "Design Review",
-      "date": "2024-02-15",
-      "startTime": {"hours": 14, "minutes": 30},
-      "endTime": {"hours": 16, "minutes": 0}
+      "date": "2024-02-11T00:00:00.000Z",
+      "color": "#37515F",
+      "startTime": {
+        "hours": 14,
+        "minutes": 30
+      },
+      "endTime": {
+        "hours": 16,
+        "minutes": 0
+      }
     },
     {
-      "id": 3,
-      "name": "Monthly Team Meeting",
-      "date": "2024-02-28",
-      "startTime": {"hours": 9, "minutes": 0},
-      "endTime": {"hours": 11, "minutes": 0}
+      "id": -1,
+      "date": "2024-02-13T00:00:00.000Z",
+      "color": "#F3B3A6",
+      "endTime": {
+        "hours": 13,
+        "minutes": 38
+      },
+      "startTime": {
+        "hours": 13,
+        "minutes": 32
+      },
+      "name": "Zadanko"
+    },
+    {
+      "date": "2024-03-21T00:00:00.000Z",
+      "endTime": {
+        "hours": 14,
+        "minutes": 48
+      },
+      "startTime": {
+        "hours": 17,
+        "minutes": 48
+      },
+      "color": "#73c3a7",
+      "name": "coś coś ",
+      "id": 3
+    },
+    {
+      "date": "2024-02-13T00:00:00.000Z",
+      "endTime": {
+        "hours": 17,
+        "minutes": 51
+      },
+      "startTime": {
+        "hours": 14,
+        "minutes": 51
+      },
+      "color": "#273553",
+      "name": "doadne",
+      "id": 4
+    },
+    {
+      "date": "2024-03-03T00:00:00.000Z",
+      "endTime": {
+        "hours": 15,
+        "minutes": 20
+      },
+      "startTime": {
+        "hours": 15,
+        "minutes": 17
+      },
+      "color": "#a4bbab",
+      "name": "asdsa",
+      "id": 5
+    },
+    {
+      "date": "2024-02-21T00:00:00.000Z",
+      "endTime": {
+        "hours": 15,
+        "minutes": 31
+      },
+      "startTime": {
+        "hours": 15,
+        "minutes": 31
+      },
+      "color": "#ffffff",
+      "name": "dodane zadanie",
+      "id": 6
     }
   ]
 }

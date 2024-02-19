@@ -13,9 +13,6 @@ export class CalendarCardComponent implements OnInit {
   @Input() dayMeetings!: Meeting[];
   constructor(private router: Router) {}
   ngOnInit(): void {
-    if(this.dayMeetings.length > 0){
-      console.log(this.dayMeetings[0].startTime.hours);
-    }
   }
 
   meetingDetail(todayMeeting: Meeting) {

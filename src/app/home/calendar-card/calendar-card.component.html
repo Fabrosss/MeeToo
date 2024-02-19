@@ -1,7 +1,7 @@
 <div class="card">
    <div class="ms-1">{{calendarCardDay}}</div>
     <div *ngIf="dayMeetings">
-      <div *ngFor="let todayMeeting of dayMeetings" class="takenDate" (click)="meetingDetail(todayMeeting)">
+      <div *ngFor="let todayMeeting of dayMeetings" class="takenDate" style="background-color: {{todayMeeting.color}}" (click)="meetingDetail(todayMeeting)">
         <div class="ms-2">
           <div>{{todayMeeting.name}}</div>
           <div>
@@ -10,6 +10,7 @@
         </div>
       </div>
     </div>
+
 </div>
 
 
