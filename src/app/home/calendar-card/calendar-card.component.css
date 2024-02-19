@@ -1,10 +1,10 @@
-.card{
-    background-color: white !important;
+.card {
+  background-color: white !important;
 }
 
-.takenDate{
-    border-radius:0.5rem !important;
+.takenDate {
+  border-radius: 0.5rem !important;
 }
-.takenDate:hover{
+.takenDate:hover {
   background-color: hsla(0, 0%, 98%, 0.35);
 }

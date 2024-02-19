@@ -1,10 +1,10 @@
-.login-component{
-    background-color: var(--background-color);
+.login-component {
+  background-color: var(--background-color);
 }
-.label-text{
-    color: var(--text-dark);
+.label-text {
+  color: var(--text-dark);
 }
-.alert-danger{
-    font-size:12px;
-    padding: 8px 16px;
+.alert-danger {
+  font-size: 12px;
+  padding: 8px 16px;
 }

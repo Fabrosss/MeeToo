@@ -21,7 +21,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import {ColorPickerModule} from "ngx-color-picker";
+import { ColorPickerModule } from 'ngx-color-picker';
 
 @NgModule({
   declarations: [
@@ -45,7 +45,7 @@ import {ColorPickerModule} from "ngx-color-picker";
     MatFormFieldModule,
     MatIconModule,
     MatButtonModule,
-    ColorPickerModule
+    ColorPickerModule,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],

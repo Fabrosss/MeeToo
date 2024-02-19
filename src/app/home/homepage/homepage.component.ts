@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Meeting } from '../../shared/interface/meeting';
-import { MeetingService } from "../../shared/services/meeting.service";
+import { MeetingService } from '../../shared/services/meeting.service';
 
 @Component({
   selector: 'app-homepage',
@@ -19,9 +19,9 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit(): void {
     this.meetingService.getMeetings().subscribe({
-      next: allMeetings => {
+      next: (allMeetings) => {
         this.meetings = allMeetings;
-      }
+      },
     });
   }
 
@@ -29,26 +29,26 @@ export class HomepageComponent implements OnInit {
     const firstDayOfMonth = new Date(
       this.currentMonth.getFullYear(),
       this.currentMonth.getMonth(),
-      1
+      1,
     );
     const lastDayOfMonth = new Date(
       this.currentMonth.getFullYear(),
       this.currentMonth.getMonth() + 1,
-      0
+      0,
     );
 
     const firstDayOfWeek = (firstDayOfMonth.getDay() + 6) % 7;
     const lastDayOfMonthDate = lastDayOfMonth.getDate();
 
     this.calendarDays = Array.from({ length: firstDayOfWeek }, () => 0).concat(
-      Array.from({ length: lastDayOfMonthDate }, (_, index) => index + 1)
+      Array.from({ length: lastDayOfMonthDate }, (_, index) => index + 1),
     );
   }
 
   prevMonth(): void {
     this.currentMonth = new Date(
       this.currentMonth.getFullYear(),
-      this.currentMonth.getMonth() - 1
+      this.currentMonth.getMonth() - 1,
     );
     this.generateCalendarDays();
   }
@@ -56,16 +56,21 @@ export class HomepageComponent implements OnInit {
   nextMonth(): void {
     this.currentMonth = new Date(
       this.currentMonth.getFullYear(),
-      this.currentMonth.getMonth() + 1
+      this.currentMonth.getMonth() + 1,
     );
     this.generateCalendarDays();
   }
 
   getDayMeetings(day: number): Meeting[] {
-    return this.meetings.filter(meeting => this.isSameDay(new Date(meeting.date), day));
+    return this.meetings.filter((meeting) =>
+      this.isSameDay(new Date(meeting.date), day),
+    );
   }
 
   private isSameDay(day1: Date, day2: number): boolean {
-    return day1.getDate() === day2 && day1.getMonth() === this.currentMonth.getMonth();
+    return (
+      day1.getDate() === day2 &&
+      day1.getMonth() === this.currentMonth.getMonth()
+    );
   }
 }

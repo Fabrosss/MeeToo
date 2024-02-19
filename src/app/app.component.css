@@ -1,3 +1,8 @@
-body{
-    background: linear-gradient(to bottom, var(--background-color), var(--secondary-color), var(--primary-color));
+body {
+  background: linear-gradient(
+    to bottom,
+    var(--background-color),
+    var(--secondary-color),
+    var(--primary-color)
+  );
 }

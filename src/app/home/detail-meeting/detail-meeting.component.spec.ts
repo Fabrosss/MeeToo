@@ -8,10 +8,9 @@ describe('DetailMeetingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DetailMeetingComponent]
-    })
-    .compileComponents();
-    
+      declarations: [DetailMeetingComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(DetailMeetingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
